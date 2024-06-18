@@ -1,0 +1,135 @@
+.hero{
+      height: 93vh;
+
+    /*background:linear-gradient(180deg,#fde1ff,#e1ffea22 60%);*/
+      background:linear-gradient(180deg,#c4ebd7,#e1ffea22 60%);
+      display: flex;
+}
+.heroLeft{
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: 20px;
+     padding-left: 140px;
+     line-height: 1.1;
+}
+.heroLeft h2{
+    color: #202046;
+    font-size: 22px;
+    font-weight: 600;
+}
+.heroLeft p{
+    color: #14142c;
+    font-size: 80px;
+    font-weight: 700;
+}
+.handIcon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.handIcon img{
+    width: 85px;
+}
+.heroLatestBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 250px;
+    height: 50px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background-color: #0a6638;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.heroRight{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.heroRight img{
+  width: 700px;
+  margin-top: -100px;
+  margin-left: -75px;
+}
+
+@media(max-width:1280px){
+    .heroLeft{
+        padding-left: 120px;
+        
+    }
+    .heroLeft h2{
+        font-size: 20px;
+    }
+    .heroLeft p{
+        font-size: 60px;
+    }
+    .handIcon img{
+        width: 80px;
+    }
+    .heroRight{
+       
+    }
+    .heroRight img{
+        width: 600px;
+    }
+}
+
+@media(max-width:1024px){
+    .heroLeft{
+        padding-left: 60px;
+        
+    }
+    .heroLeft h2{
+        font-size: 18px;
+    }
+    .heroLeft p{
+        font-size: 50px;
+    }
+    .handIcon img{
+        width: 65px;
+    }
+    
+}
+
+@media(max-width:800px){
+    .heroLeft{
+        padding-left: 30px;
+        
+    }
+    .heroLeft h2{
+        font-size: 16px;
+    }
+    .heroLeft p{
+        font-size: 40px;
+    }
+    .handIcon img{
+        width: 50px;
+    }
+    .heroRight img{
+        width: 400px;
+    }
+}
+@media(max-width:600px){
+    .hero{
+        flex-direction: column;
+    }
+    .heroRight{
+        display: none;
+    }
+    .heroLeft h2{
+        font-size: 18px;
+    }
+    .heroLeft p{
+        font-size: 50px;
+    }
+    .handIcon img{
+        width: 55px;
+    }
+}

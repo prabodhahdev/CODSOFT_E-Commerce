@@ -1,0 +1,132 @@
+.newsLetter{
+    width: 65%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 50px;
+    gap: 30px;
+    background:linear-gradient(180deg,#c4ebd7,#e1ffea22 60%);
+}
+.newsLetter h1{
+    color: #14142c;
+    font-size: 50px;
+    font-weight: 600;
+}
+.newsLetter p{
+    color: #14142c;
+    font-size: 20px;
+}
+.newsLetter div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 80px;
+    height: 60px;
+    width: 730px;
+    border: 1px solid #e3e3e3;
+
+}
+.newsLetter input{
+    width: 500px;
+    margin-left: 30px;
+    border: none;
+    outline: none;
+    color: #616161;
+    font-size: 16px;
+    font-family: 'Poppins';
+}
+.newsLetter div button{
+    width: 200px;
+    height: 60px;
+    border-radius: 80px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    background: #14142c;
+}
+
+@media(max-width:1280px){
+    .newsLetter{
+        padding: 0 80px;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .newsLetter h1{
+        font-size: 40px;
+    }
+    .newsLetter p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .newsLetter div{
+        width: 700px;
+      
+    }
+}
+@media(max-width:1024px){
+    .newsLetter{
+        padding: 0 50px;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .newsLetter h1{
+        font-size: 30px;
+    }
+   
+    .newsLetter div{
+        width: 500px;
+        height: 40px;
+      
+    }
+
+}
+
+@media(max-width:800px){
+    .newsLetter{
+        padding: 0 30px;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+    .newsLetter h1{
+        font-size: 29px;
+    }
+    .newsLetter p{
+        font-size: 18px;
+    }
+    .newsLetter div{
+        width: 400px;
+      
+    }
+    .newsLetter div button{
+        font-size: 14px;
+    }
+}
+
+@media(max-width:500px){
+    .newsLetter{
+        padding: 0;
+        width: 100%;
+        gap: 20px;
+        height: 25vh;
+    }
+    .newsLetter h1{
+        font-size: 25px;
+    }
+    .newsLetter p{
+        font-size: 18px;
+    }
+    .newsLetter div{
+        width: 375px;
+        height: 45px;
+      
+    }
+   
+    .newsLetter div button{
+        height: 45px;
+    }
+}

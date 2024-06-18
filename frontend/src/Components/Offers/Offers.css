@@ -1,0 +1,126 @@
+.offers{
+    width: 65%;
+    height: 60vh;
+    display: flex;
+    margin: auto;
+    padding: 0px 140px;
+    margin-bottom: 150px;
+    background:linear-gradient(180deg,#c4ebd7,#e1ffea22 60%);
+}
+.offers-left{
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+.offers-left h1{
+    color: #14142c;/*171717*/
+    font-size:50px;
+    font-weight: 600;
+}
+.offers-left p{
+    color:#14142c;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.offers-left button{
+    width: 200px;
+    height: 50px;
+    border-radius: 35px;
+    background-color: #0a6638;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.offers-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    }
+.offers-right img{
+    width: 290px;
+}
+
+@media(max-width:1280px){
+    .offers{
+        padding: 0 80px;
+        margin-bottom: 50px;
+        height: 55vh;
+    }
+    .offers-left h1{
+        font-size: 40px;
+    }
+    .offers-left p{
+        font-size: 18px;
+    }
+    .offers-right img{
+        width: 270px;
+    }
+    
+}
+
+@media(max-width:1024px){
+    .offers{
+        padding: 0 60px;
+        margin-bottom: 40px;
+        height: 50vh;
+    }
+    .offers-left h1{
+        font-size: 30px;
+    }
+    .offers-left p{
+        font-size: 16px;
+    }
+    .offers-right img{
+        width: 250px;
+    }
+    
+}
+@media(max-width:800px){
+    .offers{
+        height: 45vh;
+        margin-bottom: 50px;
+    }
+    .offers-left h1{
+        font-size: 22px;
+    }
+    .offers-left p{
+        font-size: 16px;
+    }
+    .offers-right img{
+        width: 200px;
+    }
+    .offers-left button{
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+}
+
+@media(max-width:500px){
+    .offers{
+        height: 25vh;
+        width: 74%;
+        
+    }
+    .offers-left h1{
+        font-size: 16px;
+    }
+    .offers-left p{
+        font-size: 10px;
+    }
+    .offers-right img{
+        width: 110px;
+    }
+    .offers-left button{
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
