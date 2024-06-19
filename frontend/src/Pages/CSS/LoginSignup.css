@@ -51,6 +51,7 @@
     color: #0a6638;
     font-weight: 600;
     padding-left: 10px;
+    cursor: pointer;
 }
 .loginsignuop-agree{
     display: flex;
