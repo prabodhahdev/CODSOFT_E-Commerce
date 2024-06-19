@@ -10,14 +10,16 @@ const ShopCatogory = (props) => {
     <div className='shop-catogory'>
       <img src={props.banner} alt="" />
       <div className="shopcatogory-indexSort">
+        <div className="shopcategory-para">
         <p>
           <span>
             Showing 1-12
           </span>
           out of 36 products
         </p>
+        </div>
         <div className="shopcatogory-sort">
-          Sort by <img src={drop_down} alt="" />
+          <button>Sort by <img src={drop_down} alt="" /></button>
         </div>
       </div>
       <div className="shopcatogory-products">

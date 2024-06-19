@@ -3,19 +3,23 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 740px;
+    height: 600px;
     padding: 10px 50px;
-    margin: 30px;
+    margin: auto 30px;
     border-radius: 6px;
-    background: white;
+    background-color: white;
 
+}
+.list-product h1{
+    font-size: 30px;
+    margin: 0;
 }
 .listproduct-format-main{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr;
     gap: 10px;
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     color: #454545;
     font-weight: 600;
     font-size: 15px;

@@ -4,8 +4,9 @@
     padding-top: 30px;
     width: 100%;
     max-width: 300px;
-    height: 100vh;
-    background: #0a6638;
+    height: 89vh;
+    background: hsl(150, 82%, 22%);
+    
 }
 .sidebar-item{
     display: flex;

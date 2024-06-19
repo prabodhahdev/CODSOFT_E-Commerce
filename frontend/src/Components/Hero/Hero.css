@@ -4,6 +4,9 @@
     /*background:linear-gradient(180deg,#fde1ff,#e1ffea22 60%);*/
       background:linear-gradient(180deg,#c4ebd7,#e1ffea22 60%);
       display: flex;
+      background:linear-gradient(180deg,#159b58,#e1ffea22 90%);
+
+      
 }
 .heroLeft{
      flex: 1;
