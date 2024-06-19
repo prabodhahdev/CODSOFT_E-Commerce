@@ -232,6 +232,78 @@ app.get('/newcollections',async(req,res)=>{
     res.send(newcollection);
 })
 
+//Creating end points for popular for women section
+app.get('/popularinwomen',async(req,res)=>{
+    let products =await Product.find({category:"women"});
+    let popular_in_women=products.slice(0.4);
+    console.log("Popular in women Fetched");
+    res.send(popular_in_women);
+})
+
+//creating middleware to fetch user
+const fetchUser=async(req,res,next)=>{
+    const token =req.header('auth-token');
+    if(!token){
+        res.status(401).send({errors:"Please authenticate using valid token"});
+    }
+    else{
+        try{
+            const data=jwt.verify(token,'secret_ecom');
+            req.user=data.user;
+            next();
+        }catch(error){
+            res.status(401).send({errors:"Please authenticate using a valid token"})
+        }
+    }
+}//creating endpoint for cart data
+app.post('/addtocart', fetchUser, async (req, res) => {
+    console.log("Added to cart", req.body.itemId);
+    
+    let userData = await Users.findOne({ _id: req.user.id });
+
+    // Initialize cartData and item if not already defined
+    if (!userData.cartData) {
+        userData.cartData = {};
+    }
+    if (!userData.cartData[req.body.itemId]) {
+        userData.cartData[req.body.itemId] = 0;
+    }
+    
+    userData.cartData[req.body.itemId] += 1;
+
+    await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+    res.send("Added");
+});
+
+//creating endpoint to remove product from cartData
+app.post('/removefromcart', fetchUser, async (req, res) => {
+    console.log("Removed from cart", req.body.itemId);
+    
+    let userData = await Users.findOne({ _id: req.user.id });
+
+    if (userData.cartData && userData.cartData[req.body.itemId] > 0) {
+        userData.cartData[req.body.itemId] -= 1;
+    }
+
+    await Users.findOneAndUpdate({ _id: req.user.id }, { cartData: userData.cartData });
+    res.send("Removed");
+});
+
+//creating endpoint to get cart data
+app.post('/getcart', fetchUser, async (req, res) => {
+    try {
+        console.log("GetCart");
+        let userData = await Users.findOne({ _id: req.user.id });
+        if (!userData) {
+            return res.status(404).json({ error: "User not found" });
+        }
+        res.json(userData.cartData || {});
+    } catch (error) {
+        console.error("Error fetching cart data:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+});
+
 
 app.listen(port, (err) => {
     if (!err) {
