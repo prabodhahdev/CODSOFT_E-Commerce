@@ -6,7 +6,7 @@ const Popular = () => {
   const [popularProduct, setPopularProduct] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/popularinwomen')
+    fetch('https://codsoft-e-commerce.onrender.com/popularinwomen')
       .then((response) => response.json())  // Correctly parse the JSON
       .then((data) => setPopularProduct(data))
       .catch((error) => console.error('Error fetching popular products:', error));
